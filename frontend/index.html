@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sioca - 911ab | The Useless Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@400;500;600;700&family=VT323&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Main Container Wrapper - Two Column Layout -->
+    <div class="calculator-wrapper">
+        
+        <!-- ============================================= -->
+        <!-- LEFT COLUMN: Display Station -->
+        <!-- ============================================= -->
+        <div class="display-station">
+            
+            <!-- Branding Header -->
+            <div class="brand-header">
+                <span class="brand-logo">sioca</span>
+                <span class="brand-divider">-</span>
+                <span class="brand-model">911ab</span>
+            </div>
+            
+            <!-- Tagline -->
+            <div class="brand-tagline">The Useless Calculator™</div>
+
+            <!-- Solar Panel -->
+            <div class="solar-panel">
+                <div class="solar-cell"></div>
+                <div class="solar-cell"></div>
+                <div class="solar-cell"></div>
+                <div class="solar-cell"></div>
+                <div class="solar-cell"></div>
+                <div class="solar-cell"></div>
+                <div class="solar-cell"></div>
+                <div class="solar-cell"></div>
+            </div>
+
+            <!-- The Receipt Display (Elongated LCD Screen) -->
+            <div class="display-container">
+                <div class="display">
+                    <!-- Status Bar -->
+                    <div class="status-bar">
+                        <span class="status-item active" id="status-mode">CHAOS</span>
+                        <span class="status-item" id="status-memory">M</span>
+                        <span class="status-item" id="status-shift">SHIFT</span>
+                        <span class="status-item" id="status-alpha">ALPHA</span>
+                    </div>
+
+                    <!-- Input Section (Top of Receipt) -->
+                    <div class="input-section">
+                        <div class="input-label">INPUT:</div>
+                        <div class="input-display" id="input-display">0</div>
+                    </div>
+
+                    <!-- The Gap (Loading spinners, ASCII Art, Status messages) -->
+                    <div class="gap-section" id="gap-section">
+                        <div class="gap-text">Ready to calculate...</div>
+                    </div>
+
+                    <!-- Output Section (Bottom of Receipt) -->
+                    <div class="output-section">
+                        <div class="output-label">OUTPUT:</div>
+                        <div class="output-display" id="output-display">
+                            <span class="output-text"></span>
+                        </div>
+                        <div class="output-author" id="output-author"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Display Station Footer -->
+            <div class="station-footer">
+                <span class="footer-badge">TWO WAY POWER</span>
+                <span class="footer-badge">NATURAL-V.P.A.M.</span>
+            </div>
+        </div>
+
+        <!-- ============================================= -->
+        <!-- RIGHT COLUMN: Control Panel -->
+        <!-- ============================================= -->
+        <div class="control-panel">
+            
+            <!-- Control Panel Header/Branding -->
+            <div class="panel-header">
+                <div class="panel-brand">
+                    <span class="panel-title">CONTROL PANEL</span>
+                    <span class="panel-model">fx-911ab Scientific</span>
+                </div>
+            </div>
+
+            <!-- ========================================= -->
+            <!-- SECTION 1: Navigation/Mode Keys (6-col) -->
+            <!-- ========================================= -->
+            <div class="keypad-section keypad-nav">
+                <button class="key key-nav" data-action="shift">SHIFT</button>
+                <button class="key key-nav" data-action="alpha">ALPHA</button>
+                <button class="key key-nav key-mode" data-action="mode">MODE</button>
+                <button class="key key-nav key-on" data-action="on">ON</button>
+            </div>
+
+            <!-- ========================================= -->
+            <!-- SECTION 2: Scientific Functions (5-col) -->
+            <!-- ========================================= -->
+            <div class="keypad-section keypad-scientific">
+                <!-- Row 1: Powers & Roots -->
+                <button class="key key-func" data-value="sqrt(">√</button>
+                <button class="key key-func" data-value="**2">x²</button>
+                <button class="key key-func" data-value="**(1/3)">³√</button>
+                <button class="key key-func" data-value="**">xʸ</button>
+                <button class="key key-func" data-value="1/">x⁻¹</button>
+
+                <!-- Row 2: Logarithms -->
+                <button class="key key-func" data-value="log(">log</button>
+                <button class="key key-func" data-value="ln(">ln</button>
+                <button class="key key-func" data-value="10**">10ˣ</button>
+                <button class="key key-func" data-value="e**">eˣ</button>
+                <button class="key key-func" data-value="e">e</button>
+
+                <!-- Row 3: Trigonometry -->
+                <button class="key key-trig" data-value="sin(">sin</button>
+                <button class="key key-trig" data-value="cos(">cos</button>
+                <button class="key key-trig" data-value="tan(">tan</button>
+                <button class="key key-func" data-value="pi">π</button>
+                <button class="key key-func" data-value="abs(">|x|</button>
+
+                <!-- Row 4: Inverse Trig -->
+                <button class="key key-trig" data-value="asin(">sin⁻¹</button>
+                <button class="key key-trig" data-value="acos(">cos⁻¹</button>
+                <button class="key key-trig" data-value="atan(">tan⁻¹</button>
+                <button class="key key-func" data-value="(">(</button>
+                <button class="key key-func" data-value=")">)</button>
+
+                <!-- Row 5: Memory & Special -->
+                <button class="key key-memory" data-action="mc">MC</button>
+                <button class="key key-memory" data-action="mr">MR</button>
+                <button class="key key-memory" data-action="m+">M+</button>
+                <button class="key key-memory" data-action="m-">M−</button>
+                <button class="key key-func" data-value="%">%</button>
+            </div>
+
+            <!-- Visual Separator -->
+            <div class="keypad-divider"></div>
+
+            <!-- ========================================= -->
+            <!-- SECTION 3: Numpad & Operators (5-col) -->
+            <!-- ========================================= -->
+            <div class="keypad-section keypad-numpad">
+                <!-- Row 1: 7 8 9 DEL AC -->
+                <button class="key key-num" data-value="7">7</button>
+                <button class="key key-num" data-value="8">8</button>
+                <button class="key key-num" data-value="9">9</button>
+                <button class="key key-del" data-action="delete">DEL</button>
+                <button class="key key-ac" data-action="clear">AC</button>
+
+                <!-- Row 2: 4 5 6 × ÷ -->
+                <button class="key key-num" data-value="4">4</button>
+                <button class="key key-num" data-value="5">5</button>
+                <button class="key key-num" data-value="6">6</button>
+                <button class="key key-op" data-value="*">×</button>
+                <button class="key key-op" data-value="/">÷</button>
+
+                <!-- Row 3: 1 2 3 + − -->
+                <button class="key key-num" data-value="1">1</button>
+                <button class="key key-num" data-value="2">2</button>
+                <button class="key key-num" data-value="3">3</button>
+                <button class="key key-op" data-value="+">+</button>
+                <button class="key key-op" data-value="-">−</button>
+
+                <!-- Row 4: 0 . EXP Ans = -->
+                <button class="key key-num" data-value="0">0</button>
+                <button class="key key-num" data-value=".">.</button>
+                <button class="key key-func" data-value="*10**">EXP</button>
+                <button class="key key-func" data-value="ans">Ans</button>
+                <button class="key key-equals" data-action="equals">=</button>
+            </div>
+
+            <!-- Control Panel Footer -->
+            <div class="panel-footer">
+                <span class="footer-text">© 2026 Useless Industries</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Hidden canvas for analog clock rendering -->
+    <canvas id="analog-clock" width="150" height="150" style="display: none;"></canvas>
+
+    <!-- Useless Leaderboard Ticker -->
+    <div class="stats-ticker">
+        <div class="ticker-content">
+            <span class="ticker-item">
+                <span class="ticker-icon">⏱️</span>
+                <span class="ticker-label">Time Wasted by Humanity:</span>
+                <span class="ticker-value" id="stat-time">0 seconds</span>
+            </span>
+            <span class="ticker-divider">│</span>
+            <span class="ticker-item">
+                <span class="ticker-icon">7️⃣</span>
+                <span class="ticker-label">Lucky 7s Pressed:</span>
+                <span class="ticker-value" id="stat-sevens">0</span>
+            </span>
+            <span class="ticker-divider">│</span>
+            <span class="ticker-item">
+                <span class="ticker-icon">🧮</span>
+                <span class="ticker-label">Useless Calculations:</span>
+                <span class="ticker-value" id="stat-calcs">0</span>
+            </span>
+            <span class="ticker-divider">│</span>
+            <span class="ticker-item ticker-motto">📊 THE USELESS LEADERBOARD 📊</span>
+        </div>
+    </div>
+
+    <!-- ============================================= -->
+    <!-- PRANK MODALS -->
+    <!-- ============================================= -->
+
+    <!-- Fake Premium Upgrade Pop-up -->
+    <div class="premium-modal" id="premium-modal">
+        <div class="premium-backdrop"></div>
+        <div class="premium-content">
+            <div class="premium-icon">💎</div>
+            <h2 class="premium-title">Upgrade to Calculator Pro™</h2>
+            <p class="premium-price">Only $9.99/month</p>
+            <p class="premium-description">Unlock accurate answers, fewer existential crises, and premium math support.</p>
+            <div class="premium-features">
+                <div class="premium-feature">✓ Correct calculations (sometimes)</div>
+                <div class="premium-feature">✓ Ad-free experience (lie)</div>
+                <div class="premium-feature">✓ Priority access to the void</div>
+            </div>
+            <div class="premium-buttons">
+                <button class="premium-btn premium-btn-upgrade" id="premium-upgrade">Upgrade Now</button>
+                <button class="premium-btn premium-btn-decline" id="premium-decline">No thanks, I love suffering</button>
+            </div>
+            <p class="premium-disclaimer">*Subscription auto-renews. Cancel anytime (but we won't let you).</p>
+        </div>
+    </div>
+
+    <!-- Fake BSOD (Blue Screen of Death) -->
+    <div class="bsod-overlay" id="bsod-overlay">
+        <div class="bsod-content">
+            <div class="bsod-emoticon">:(</div>
+            <h1 class="bsod-title">Your calculator ran into a problem and needs to restart.</h1>
+            <p class="bsod-info">We're just collecting some error info, and then we'll restart for you.</p>
+            <div class="bsod-progress">
+                <span class="bsod-percent" id="bsod-percent">0</span>% complete
+            </div>
+            <div class="bsod-details">
+                <p>Stop code: MATH_OVERFLOW_EXCEPTION</p>
+                <p>If you call support, give them this info:</p>
+                <p class="bsod-code">Error: 0x00000069 CALCULATOR_NOT_HAVING_IT</p>
+            </div>
+            <div class="bsod-qr">
+                <div class="bsod-qr-fake">▄▄▄▄▄<br>█ ▀ █<br>▀▀▀▀▀</div>
+            </div>
+            <div class="bsod-joke" id="bsod-joke"></div>
+        </div>
+    </div>
+
+    <!-- ============================================= -->
+    <!-- INTERACTIVE/META PRANK OVERLAYS -->
+    <!-- ============================================= -->
+
+    <!-- Fake CAPTCHA Modal -->
+    <div class="prank-overlay" id="captcha-overlay">
+        <div class="prank-modal captcha-modal">
+            <div class="captcha-header">
+                <span class="captcha-icon">🤖</span>
+                <h2>Prove you are not a robot</h2>
+            </div>
+            <div class="captcha-challenge" id="captcha-challenge">
+                <p class="captcha-instruction" id="captcha-instruction">Select all squares with <strong>traffic lights</strong></p>
+                <div class="captcha-grid" id="captcha-grid">
+                    <!-- Grid will be filled by JS -->
+                </div>
+            </div>
+            <div class="captcha-footer">
+                <button class="captcha-btn" onclick="verifyCaptcha()">Verify</button>
+                <button class="captcha-btn captcha-btn-audio" onclick="playCaptchaAudio()">🔊 Audio Challenge</button>
+            </div>
+            <p class="captcha-disclaimer">Powered by reCAPTCHA-ish™</p>
+        </div>
+    </div>
+
+    <!-- Fake Terms & Conditions Modal -->
+    <div class="prank-overlay" id="terms-overlay">
+        <div class="prank-modal terms-modal">
+            <h2 class="terms-title">📜 Terms & Conditions</h2>
+            <div class="terms-content" id="terms-content">
+                <!-- Will be filled with walls of text by JS -->
+            </div>
+            <div class="terms-footer">
+                <label class="terms-checkbox">
+                    <input type="checkbox" id="terms-checkbox">
+                    <span>I have read and agree to sell my soul to Calculator Inc.</span>
+                </label>
+                <button class="terms-btn terms-btn-agree" id="terms-agree-btn">I Agree</button>
+                <button class="terms-btn terms-btn-disagree" onclick="closeTerms(false)">I Disagree (but you'll click agree anyway)</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fake Virus Warning Modal -->
+    <div class="prank-overlay" id="virus-overlay">
+        <div class="prank-modal virus-modal">
+            <div class="virus-header">
+                <span class="virus-icon">⚠️</span>
+                <span class="virus-icon">🦠</span>
+                <span class="virus-icon">⚠️</span>
+            </div>
+            <h1 class="virus-title">🚨 VIRUS DETECTED 🚨</h1>
+            <div class="virus-warning">
+                <p class="virus-blink">YOUR CALCULATOR HAS BEEN INFECTED!</p>
+                <p>Threat: <strong>MATH.TROJAN.DIVISION_BY_ZERO</strong></p>
+                <p>Risk Level: <span class="virus-critical">CRITICAL</span></p>
+            </div>
+            <div class="virus-scanner">
+                <div class="virus-scan-line"></div>
+                <p id="virus-scan-output">Scanning... Found 47 viruses, 23 trojans, and 1 suspicious burrito recipe</p>
+            </div>
+            <div class="virus-buttons">
+                <button class="virus-btn" onclick="removeVirus()">🛡️ Quarantine Now</button>
+                <button class="virus-btn" onclick="removeVirus()">🛡️ Also Quarantine</button>
+                <button class="virus-btn virus-btn-ignore" onclick="ignoreVirus()">Ignore (not recommended)</button>
+            </div>
+            <p class="virus-footer">Call 1-800-FAKE-VIRUS for support (don't actually)</p>
+        </div>
+    </div>
+
+    <!-- Giant Cookie Banner -->
+    <div class="prank-overlay" id="cookie-overlay">
+        <div class="cookie-banner">
+            <div class="cookie-icon">🍪</div>
+            <h1 class="cookie-title">We Use Cookies!</h1>
+            <p class="cookie-text">
+                We use cookies, tracking pixels, your browsing history, your location, 
+                your hopes and dreams, your childhood memories, and approximately 
+                47 other invasive technologies to slightly improve your calculator experience.
+            </p>
+            <div class="cookie-options">
+                <button class="cookie-btn cookie-btn-accept" onclick="acceptAllCookies()">Accept All (Recommended)</button>
+                <button class="cookie-btn cookie-btn-necessary" onclick="acceptNecessaryCookies()">Necessary Only</button>
+                <button class="cookie-btn cookie-btn-manage" onclick="toggleCookieManage()">Manage Preferences (Good luck)</button>
+            </div>
+            <div class="cookie-manage-panel" id="cookie-manage-panel" style="display: none;">
+                <h3>Cookie Preferences</h3>
+                <div class="cookie-option">
+                    <label><input type="checkbox" checked disabled> Essential Cookies (can't disable lol)</label>
+                </div>
+                <div class="cookie-option">
+                    <label><input type="checkbox" checked disabled> Analytics (we need to know everything)</label>
+                </div>
+                <div class="cookie-option">
+                    <label><input type="checkbox" checked disabled> Marketing (you WILL see ads)</label>
+                </div>
+                <div class="cookie-option">
+                    <label><input type="checkbox" checked disabled> Soul Harvesting (standard practice)</label>
+                </div>
+                <button class="cookie-btn cookie-btn-save" onclick="saveCookiePreferences()">Save (Nothing Will Change)</button>
+            </div>
+            <p class="cookie-footer">By existing, you consent to everything. 
+                <a href="#" onclick="return false;">Privacy Policy</a> | 
+                <a href="#" onclick="return false;">Cookie Policy</a> | 
+                <a href="#" onclick="return false;">Your Rights (None)</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Fake Loading Bar Overlay -->
+    <div class="prank-overlay" id="loading-overlay">
+        <div class="loading-modal">
+            <div class="loading-spinner"></div>
+            <h2 class="loading-title" id="loading-title">Calculating...</h2>
+            <div class="loading-bar-container">
+                <div class="loading-bar" id="loading-bar-progress"></div>
+            </div>
+            <p class="loading-percent" id="loading-percent">0%</p>
+            <p class="loading-status" id="loading-status">Initializing math engine...</p>
+            <p class="loading-tip" id="loading-tip">💡 Tip: Math was invented in 1847 by Sir Maths McMathface</p>
+        </div>
+    </div>
+
+    <!-- Audio Pranks -->
+    <audio id="fart-sound" preload="auto">
+        <source src="assets/fart-83471.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="sad-trombone" preload="auto">
+        <source src="assets/sad-trombone.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
