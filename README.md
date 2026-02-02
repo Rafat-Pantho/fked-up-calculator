@@ -15,6 +15,7 @@
 ## 🎭 What is this?
 
 This is a fully functional calculator that **refuses to be functional**. Type `2+2` and you might get:
+
 - `"4 (but in a parallel universe, it's 5)"`
 - `"That's approximately 4 bananas"`
 - `"The answer is 4. But have you considered therapy?"`
@@ -27,8 +28,10 @@ It's a web app built with Flask + vanilla JavaScript, designed to waste your tim
 ## ✨ Features
 
 ### 🎲 20+ Chaos Modes
+
 | Mode | What It Does |
 |------|--------------|
+
 | **Gaslighting** | Shows the right answer, then changes it when you look away |
 | **Unit Converter** | "42 = 0.00047 football fields" |
 | **Literal Interpreter** | `1+1` → "one plus one" (with ASCII art) |
@@ -45,6 +48,7 @@ It's a web app built with Flask + vanilla JavaScript, designed to waste your tim
 | **...and more!** | 20+ modes of mathematical chaos |
 
 ### 🥚 Easter Eggs
+
 - Type `42` → The meaning of life
 - Type `1+1` → Philosophical debate
 - Type `pi` → 1000 digits of π
@@ -56,6 +60,7 @@ It's a web app built with Flask + vanilla JavaScript, designed to waste your tim
 
 | Prank | Description |
 |-------|-------------|
+
 | **Fake CAPTCHA** | "Select all squares containing INVISIBLE CATS" |
 | **Terms & Conditions** | 47 pages of nonsense, "I Agree" button runs away |
 | **Virus Warning** | Both buttons download the "virus" |
@@ -66,10 +71,12 @@ It's a web app built with Flask + vanilla JavaScript, designed to waste your tim
 | **Premium Popup** | "Upgrade to Calculator Pro!" |
 
 ### 🔊 Audio Pranks
+
 - **Division Fart**: Every time you press ÷, a fart sound plays 💨
 - **Sad Trombone**: Plays on gaslighting mode and errors 🎺
 
 ### 🎨 Visual Chaos
+
 - ClassWiz-inspired button design
 - Solar panel that "loses power" if you stop moving
 - Buttons that swap positions randomly
@@ -81,6 +88,7 @@ It's a web app built with Flask + vanilla JavaScript, designed to waste your tim
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Python 3.10+
 - A sense of humor
 
@@ -117,7 +125,7 @@ python app.py
 
 ## 📁 Project Structure
 
-```
+```md
 fked-up-calculator/
 ├── backend/
 │   ├── app.py           # Flask API with all chaos logic
@@ -148,6 +156,7 @@ fked-up-calculator/
 ## 📊 The Useless Leaderboard
 
 The calculator tracks completely meaningless statistics:
+
 - ⏱️ **Total Time Wasted** by all users
 - **7️⃣ Times "7" Was Pressed** (it's always watching)
 - 🔢 **Calculations Performed** (none of them correct)
@@ -159,6 +168,7 @@ The calculator tracks completely meaningless statistics:
 Found a bug? Good. It's a feature now.
 
 Want to add more chaos? PRs welcome! Ideas:
+
 - More chaos modes
 - More Easter eggs
 - More ways to psychologically torment users
@@ -169,6 +179,7 @@ Want to add more chaos? PRs welcome! Ideas:
 ## ⚠️ Disclaimer
 
 This calculator is:
+
 - ❌ Not suitable for homework
 - ❌ Not suitable for taxes
 - ❌ Not suitable for rocket science
@@ -176,6 +187,7 @@ This calculator is:
 - ✅ Perfect for annoying your friends
 
 **Do not use this calculator for any important calculations.** We are not responsible for:
+
 - Failed exams
 - Crashed rockets
 - Existential crises
