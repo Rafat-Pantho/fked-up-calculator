@@ -31,7 +31,6 @@ It's a web app built with Flask + vanilla JavaScript, designed to waste your tim
 
 | Mode | What It Does |
 |------|--------------|
-
 | **Gaslighting** | Shows the right answer, then changes it when you look away |
 | **Unit Converter** | "42 = 0.00047 football fields" |
 | **Literal Interpreter** | `1+1` → "one plus one" (with ASCII art) |
@@ -60,7 +59,6 @@ It's a web app built with Flask + vanilla JavaScript, designed to waste your tim
 
 | Prank | Description |
 |-------|-------------|
-
 | **Fake CAPTCHA** | "Select all squares containing INVISIBLE CATS" |
 | **Terms & Conditions** | 47 pages of nonsense, "I Agree" button runs away |
 | **Virus Warning** | Both buttons download the "virus" |
